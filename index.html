@@ -143,12 +143,20 @@ input.n:focus{outline:2px solid var(--accent);border-color:var(--accent)}
 .result .big{font:600 2.6rem var(--f-display)}
 .small{font-size:.85rem;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.fill{transition:none}}
+
+/* Selector de versión: Original (index.html) | Nuevo (index2.html) */
+.vsw{display:inline-flex;align-items:stretch;border:1px solid var(--line);overflow:hidden}
+.vsw a{display:flex;align-items:center;padding:5px 9px;font:600 .7rem var(--f-mono);letter-spacing:.02em;color:var(--muted);text-decoration:none;white-space:nowrap;transition:background .15s,color .15s}
+.vsw a+a{border-left:1px solid var(--line)}
+.vsw a:hover{background:var(--sunk);color:var(--ink)}
+.vsw a.on{background:var(--accent);color:var(--on-accent)}
+@media (max-width:560px){.vsw a{padding:5px 6px;font-size:.64rem}.trow{flex-wrap:wrap}.trow .brand{flex:1 1 100%;white-space:normal}.tr2{margin-left:auto}}
 </style>
 </head>
 <body>
 
 <header class="top"><div class="wrap">
-  <div class="trow"><span class="brand">Apostila RJ e Falência · Prova 18/11</span><span class="tr2"><button class="cbtn" id="tbtn" type="button" aria-label="Trocar tema"></button><button class="home" id="home" type="button" hidden>← Níveis</button></span></div>
+  <div class="trow"><span class="brand">Apostila RJ e Falência · Prova 18/11</span><span class="tr2"><button class="cbtn" id="tbtn" type="button" aria-label="Trocar tema"></button><span class="vsw" role="group" aria-label="Versão do treino"><a href="./index.html" class="on" aria-current="page">Original</a><a href="./index2.html">Nuevo</a></span><button class="home" id="home" type="button" hidden>← Níveis</button></span></div>
   <div class="track"><div class="fill" id="pf"></div></div>
   <span class="pt" id="pt"></span>
 </div></header>
